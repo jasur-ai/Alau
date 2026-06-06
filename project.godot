@@ -14,6 +14,17 @@ config/name="ALAU"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SignalBus="*uid://1p5w4k6v513u"
+Constants="*uid://o40svtgbspwv"
+PlayerStats="*uid://bs0y4rwwjsdh7"
+SaveManager="*uid://lxfusgghufxd"
+
+[global]
+
+autoload=false
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
