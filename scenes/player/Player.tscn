@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cj2ta3mnfyne6"]
+
+[ext_resource type="Script" uid="uid://gqb1g1wu5u57" path="res://scripts/player/Player.gd" id="1_wr5hl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o8nba"]
+radius = 8.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1888470681]
+script = ExtResource("1_wr5hl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=51642438]
+shape = SubResource("CapsuleShape2D_o8nba")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1701383668]
+
+[node name="Torch" type="PointLight2D" parent="." unique_id=354802379]
+position = Vector2(24, -40)
+color = Color(1, 0.46, 0.08, 1)
+energy = 1.8
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1535224612]
+current = true
+position = Vector2(180, 0)
+zoom = Vector2(1.05, 1.05)
+position_smoothing_enabled = true
+position_smoothing_speed = 5.0
+
+[node name="DebugShape" type="Polygon2D" parent="." unique_id=416345995]
+polygon = PackedVector2Array(-10, 16, 10, 16, 10, -16, -10, -16)
+color = Color(1, 0.5, 0.1, 0)

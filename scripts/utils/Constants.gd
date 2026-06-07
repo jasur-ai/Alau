@@ -14,6 +14,8 @@ const PLAYER_JUMP_FORCE: float = -300.0
 const GRAVITY: float = 600.0
 const WOLF_SPEED_BASE: float = 80.0
 const WOLF_SPEED_MAX: float = 180.0
+const PATH_CENTER_Y: float = 250.0
+const PATH_HALF_WIDTH: float = 118.0
 
 # SPAWN
 const WOLF_SPAWN_INTERVAL_START: float = 8.0
@@ -30,3 +32,11 @@ const SACRIFICE_MULTIPLIER: float = 3.0
 
 # QIYINLIK
 const DIFFICULTY_RAMP_TIME: float = 30.0
+
+func path_y(x: float) -> float:
+	return PATH_CENTER_Y + sin(x * 0.006) * 70.0 + sin(x * 0.019 + 1.7) * 24.0
+
+func path_normal(x: float) -> Vector2:
+	var y1 := path_y(x - 8.0)
+	var y2 := path_y(x + 8.0)
+	return Vector2(-(y2 - y1), 16.0).normalized()

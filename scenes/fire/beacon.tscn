@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b8lhmcnlvudgt"]
+
+[ext_resource type="Script" uid="uid://b3st1slha3i6c" path="res://scripts/fire/Beacon.gd" id="1_fjq8k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_haqtk"]
+radius = 16.0
+
+[node name="Beacon" type="Area2D" unique_id=676379279]
+script = ExtResource("1_fjq8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=32420758]
+shape = SubResource("CircleShape2D_haqtk")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1299964861]
+color = Color(1, 0.4, 0, 1)
+energy = 1.5
+
+[node name="Timer" type="Timer" parent="." unique_id=1590002103]

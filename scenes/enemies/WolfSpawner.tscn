@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://wolf_spawner_scene"]
+
+[ext_resource type="Script" path="res://scripts/enemies/WolfSpawner.gd" id="1"]
+
+[node name="WolfSpawner" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = false
+one_shot = false
